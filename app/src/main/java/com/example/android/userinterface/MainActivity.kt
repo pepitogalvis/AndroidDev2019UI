@@ -10,32 +10,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        setSupportActionBar(toolbar)
-
-        button1.setOnClickListener {
-            displayImageAsset("monster01.webp")
-        }
-
-        button2.setOnClickListener {
-            displayImageAsset("monster02.webp")
-        }
-
-        button3.setOnClickListener {
-            displayImageAsset("monster03.webp")
-        }
+        setContentView(R.layout.anidados)
 
     }
 
-    private fun displayImageAsset(fileName: String) {
-        assets.open(fileName).use {
-            val drawable = Drawable.createFromStream(it, null)
-            monsterImage.setImageDrawable(drawable)
-        }
-    }
-
-//    private fun displayImage(resId: Int) {
-//        monsterImage.setImageResource(resId)
-//    }
 
 }
